@@ -6,6 +6,9 @@
         "use": "@frontity/now"
       }
     ],
-    "redirects": [{ "source": "^/([^/]+)/([0-9]{4})/([0-9]{2})/([0-9]{2})/([^/]+)/", "destination": "https://africabusiness.news/$2/$3/$4/$5" }]
+    "rewrites": [ 
+      { "source": "/about", "destination": "/about-our-company.html" },
+      { "source": "^/([^/]+)/([0-9]{4})/([0-9]{2})/([0-9]{2})/([^/]+)/", "destination": "https://africabusiness.news/$2/$3/$4/$5" }
+    ]
   }
 
