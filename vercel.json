@@ -7,9 +7,8 @@
       }
     ],
     "redirects": [ 
-      { "source": "/news/", "destination": "/category/news" },
-      { "source": "/videos/", "destination": "/latest-video/" },
-      { "source": "/([^\/]+)\/([0-9]{4})\/([0-9]{2})\/([0-9]{2})\/([^\/]+)", "destination": "https://www.cnbcafrica.com/$2/$3/$4/$5" }
-     ]
+      { "source": "/about", "destination": "/board" },
+      { "source": "/([^\/]+)\/([0-9]{4})\/([0-9]{2})\/([0-9]{2})\/([^\/]+)/", "destination": "https://africabusiness.news/$2/$3/$4/$5" }
+    ]
   }
 
