@@ -3,6 +3,15 @@ import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 
+
+const redirects = {
+  name: "permalinks",
+  priority: 10,
+  pattern: "/^/\d{4}/\d{2}/\d{2}/:slug/",
+  func: ({ slug }) => `/${slug}/`,
+}
+
+
 const marsTheme = {
   name: "@frontity/mars-theme",
   roots: {
@@ -34,6 +43,9 @@ const marsTheme = {
    */
   actions: {
     theme: {
+      init: ({ libraries }) => {
+        libraries.source.handlers.push(redirects)      
+      },  
       toggleMobileMenu: ({ state }) => {
         state.theme.isMobileMenuOpen = !state.theme.isMobileMenuOpen;
       },
